@@ -1,5 +1,12 @@
 @import url('https://fonts.googleapis.com/css?family=Shadows+Into+Light&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Gloria+Hallelujah|Love+Ya+Like+A+Sister|Special+Elite&display=swap');
+.top-nav-collapse {
+    background-color: #3f51b5 !important;
+}
+
+.navbar:not(.top-nav-collapse) {
+    background: transparent !important;
+}
 #tamu{
     font-family: 'Shadows Into Light', cursive;
     font-size: 35px;
@@ -15,4 +22,39 @@ li {
 }
 #tamu-text-end {
     color:yellowgreen;
+}
+#push {
+    padding-top: 10%;
+}
+.landing-page-details {
+    margin-top: 5%;
+}
+.landing-page-details h1,h2 {
+    font-family: 'Love Ya Like A Sister', cursive;
+}
+.landing-page-details h1 {
+    font-family: 'Gloria Hallelujah', cursive;
+    font-size: xx-large;
+}
+.overlay {
+    background-color: rgba(0, 0, 0, 0.7);
+    height: 100%;
+}
+.landing-page {
+    background-image: url("../image/background2.jpg");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+.myPizza {
+    color: lawngreen;
+}
+.tamu {
+    color: darkgoldenrod;
+}
+.go-button button {
+    margin-top: 90px;
+    margin-bottom: 100px;
+    border-radius: 15px;
+    color: black;
 }
