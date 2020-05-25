@@ -58,3 +58,26 @@ li {
     border-radius: 15px;
     color: black;
 }
+.welcome-details {
+    margin-top: 160px;
+}
+.image-karibu {
+    margin-top: 10px;
+    margin-left: 80px;
+    margin-bottom: 130px;
+    height: 400px;
+    width: 400px;
+}
+.txt {
+    font-family: system-ui, cursive;
+    color: black;
+    font-size: 23px;
+}
+.txt-big {
+    font-size: 50px;
+    font-family: 'Shadows Into Light', cursive;
+}
+.welcome-details a {
+    text-decoration: none;
+    color: white;
+}
