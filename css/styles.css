@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css?family=Shadows+Into+Light&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Gloria+Hallelujah|Love+Ya+Like+A+Sister|Special+Elite&display=swap');
+#tamu{
+    font-family: 'Shadows Into Light', cursive;
+    font-size: 35px;
+    font-weight: normal;
+    color: darkgoldenrod;
+}
+.tam-nav-bar {
+    float: right;
+}
+li {
+    display: inline;
+    margin-right: 20px;
+}
+#tamu-text-end {
+    color:yellowgreen;
+}
