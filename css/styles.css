@@ -85,3 +85,13 @@ figure img {
     height: 260px;
     width: 260px;
 }
+a {
+    color: white;
+    font-size: 18px;
+    font-weight: normal;
+}
+.menu {
+    margin-top: 30px;
+    background-image: url("../image/dark.jpg");
+    padding: 0;
+}
