@@ -131,8 +131,26 @@
     <div class="order-summary" id="sum-order">
         <h1 class="text-center" id="summary">Order Summary</h1>
         <h2 class="text-center summary">Hello there, your order is as follows:</h2>
-        <ol id="list" class="text-center sum">
+        <ol id="sum-list" class="text-center sum">
         </ol>
+        <div class="custdata-overlay">
+            <div class="row customer-details">
+                <div class="col-sm-3"></div>
+                <form action="" class="form-group col-sm-6 details">
+                    <input type="text" class="form-control custdata" placeholder="Enter your Name:">
+                    <input type="text" class="form-control custdata" placeholder="Enter your phone number: ">
+                    <input type="text" class="form-control custdata" placeholder="Enter the location: ">
+                    <button class="btn bg-info text-center d-block mx-auto go">Make Delivery</button>
+                </form>
+    
+                <div class="col-sm-3"></div>
+            </div>
+        </div>
+        <div class="d-block mx-auto text-center">
+            <button class='deliver'>Make Delivery</button>
+            <button class='delivernot'>Pick Up</button>
+        </div>
+    
     </div>
     
 
