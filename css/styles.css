@@ -121,7 +121,7 @@ figcaption {
 .order-overlay {
     height: inherit;
     padding: 20px;
-    background-color: darkgoldenrod;
+    background-color: rgba(0, 0, 0, 0.8);
     border-radius: 20px;
 }
 
@@ -129,3 +129,39 @@ figcaption {
     border-radius: 20px;
     margin-top: 20px;
 }
+#sum-list {
+    color: #000;
+}
+.custdata {
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+button[type=submit], .deliver, .delivernot {
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    display: inline-block;
+    letter-spacing: 2px;
+    background-color:darkgoldenrod;
+    outline: none;
+    padding: 12.5px 13px;
+    border: none;
+    border-radius: 33px;
+    font-size: 14px;
+}
+.deliver, .delivernot {
+    margin: 10px;
+}
+.details {
+    height: inherit;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 10px;
+}
+.go {
+    border-radius: 20px;
+    margin-bottom: 10px;
+}
+
+
+
+
