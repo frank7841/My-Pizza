@@ -1,34 +1,22 @@
 //business logic
+//function Address(name,location){
+  //  this.myName = name;
+    //this.myLocation = location;
+}
+//user interface
+//Address.prototype.fullAddress=function(){
+  //  return "Order delivered to "+ this.myName + " in "+ this.myLocation;
+} 
 $(function () {
     $('.summary').hide();
     $('.custdata-overlay').hide();
-    var cost =150;
-    function Pizza(flavour, price){
-        this.yourFlavour = flavour;
-        this.myprice = price;
-        this.myAddresses=[];
-    }
-    function Address(name, location){
-        this.myName = name;
-        this.myLocation =location;
-    }
-    // user Interface
-    Pizza.prototype.fullPiza = function(){
-        return this.yourFlavour +" " +this.myprice;
-    }
-    Address.prototype.fullAddress = function(){
-        return this.myName +"" + this.myLocation;
-    }
-
-
-
+    $('#online-delivery').hide();
     $("#checkout").click(function () {
         var flavour = $(".flavour option:selected").val();
         var size = $("#size option:selected").val();
         var crust = $("#crust option:selected").val();
         var topping = $("#toppings option:selected").val();
         var number = $(" #number").val();
-        console.log(number);
 
         //Function order
         var order = (f, s, c, t, n, total) => {
@@ -198,52 +186,45 @@ $(function () {
                         break;
                 }
                 break;
-        }
-        switch (topping) {
-            case topping = "tomato":
-                totalPrice = totalPrice + 80;
-                break;
-            case topping = "onions":
-                totalPrice = totalPrice + 80;
-                break;
+                }
+            switch (topping) {
+                case topping = "tomato":
+                    totalPrice = totalPrice + 80;
+                    break;
+                    case topping = "onions":
+                    totalPrice = totalPrice + 80;
+                    break;
             case topping = "mushroom":
-                totalPrice = totalPrice + 80;
-                break;
+                    totalPrice = totalPrice + 80;
+                    break;
             case topping = "greenpepper":
-                totalPrice = totalPrice + 80;
-                break;
+                    totalPrice = totalPrice + 80;
+                    break;
             case topping = "olives":
-                totalPrice = totalPrice + 120;
-                break;
+                    totalPrice = totalPrice + 120;
+                    break;
             case topping = "pineapple":
-                totalPrice = totalPrice + 120;
-                break;
+                    totalPrice = totalPrice + 120;
+                    break;
             case topping = "sweetcorn":
-                totalPrice = totalPrice + 120;
-                break;
+                    totalPrice = totalPrice + 120;
+                    break;
             case topping = "macon":
-                totalPrice = totalPrice + 120;
-                break;
+                    totalPrice = totalPrice + 120;
+                    break;
             case topping = "mince":
-                totalPrice = totalPrice + 120;
-                break;
+                    totalPrice = totalPrice + 120;
+                    break;
             case topping = "beef":
-                totalPrice = totalPrice + 170;
-                break;
+                    totalPrice = totalPrice + 170;
+                    break;
             case topping = "chicken":
-                totalPrice = totalPrice + 170;
-                break;
-
+                    totalPrice = totalPrice + 170;
+                    break;
         }
 
-        //Execute order function
-        let newOrder = order(flavour, size, crust, topping, number, totalPrice);
-        console.log(newOrder); // test func
+        var newOrder = order(flavour, size, crust, topping, number, totalPrice);
 
-        //create a new object
-        // let myOrder = JSON.stringify(JSON.parse(newOrder));
-
-        //Write to the order
         $('.summary').slideDown(2000);
         $('.cdata-overlay').slideUp();
         $('#sum-list').slideDown();
@@ -258,7 +239,16 @@ $(function () {
             + newOrder.n + "<br>" + "Total Price :  "
             + newOrder.total + "<br><br>").css('font-family', 'system-ui').css('font-size', '24px');
     });
+    //$("#order-alert").click(function(){
+      //  var cost = totalPrice+150;
+        //this.myName = $("input.mynames").val();
+        //this.myLocation = $("input.mylocations").val();
+        //var newAddress = new Address(name, location);
 
+        //$("#online-delivery").show();
+        //$(".order").text("");
+        //$(".order").append("<br>" + newAddress.fullAddress() + " at " + cost + "Ksh")
+        
     //Deliver
     $(".deliver").click(function () {
         $('.summary').slideUp();
@@ -267,13 +257,17 @@ $(function () {
         $('.deliver').hide(1000);
         $('.delivernot').hide(1000);
         $('.custdata-overlay').slideDown();
-        alert( fullAddress);
-    }); 
-    //Scrollify
-    $(function () {
-        $.scrollify.move('#sum-order');
+
     });
 });
-function pickUp(){
-    alert("Welcome back for a sumptious meal");
+function showAlert(){
+    alert("Karibu tena kwa sumptious Tamu pizza!");
+}
+function delivery(){
+    $("form.data").click(function(e){
+        e.preventDefault();
+        var name = $("input.mynames").val();
+        var location = $("input.mylocations").val();
+        alert("Hello "+ name + " Your order will arrive at  " + location+ " In 15 minutes with an additional cost of 300 ksh " );
+    })
 }
