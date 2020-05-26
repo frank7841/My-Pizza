@@ -2,14 +2,26 @@
 $(function () {
     $('.summary').hide();
     $('.custdata-overlay').hide();
+    var cost =150;
+    function Pizza(flavour, price){
+        this.yourFlavour = flavour;
+        this.myprice = price;
+        this.myAddresses=[];
+    }
     function Address(name, location){
         this.myName = name;
         this.myLocation =location;
-        }
-        //user Interface
-        Address.prototype.fullAddress = function() {
-            return this.myName +"  your "+ flavour + "order will be delivered at " + this.myLocatio + "location in 30 minutes.";
-         }
+    }
+    // user Interface
+    Pizza.prototype.fullPiza = function(){
+        return this.yourFlavour +" " +this.myprice;
+    }
+    Address.prototype.fullAddress = function(){
+        return this.myName +"" + this.myLocation;
+    }
+
+
+
     $("#checkout").click(function () {
         var flavour = $(".flavour option:selected").val();
         var size = $("#size option:selected").val();
@@ -19,12 +31,12 @@ $(function () {
         console.log(number);
 
         //Function order
-        let order = (f, s, c, t, n, total) => {
+        var order = (f, s, c, t, n, total) => {
             return {f, s, c, t, n, total};
         };
 
         //check price
-        let price, totalPrice;
+        var price, totalPrice;
         switch (flavour) {
             case flavour = "vegtikka":
                 switch (size) {
@@ -256,22 +268,12 @@ $(function () {
         $('.delivernot').hide(1000);
         $('.custdata-overlay').slideDown();
         alert( fullAddress);
-    });
-
-
-    //Pick Up
-    $(".delivernot").click(function () {
-
-    });
-
-    $(".go").click(function () {
-        alert(fullAddress);
-
-    });
-    
-
+    }); 
     //Scrollify
     $(function () {
         $.scrollify.move('#sum-order');
     });
 });
+function pickUp(){
+    alert("Welcome back for a sumptious meal");
+}
