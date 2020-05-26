@@ -1,5 +1,11 @@
 @import url('https://fonts.googleapis.com/css?family=Shadows+Into+Light&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Gloria+Hallelujah|Love+Ya+Like+A+Sister|Special+Elite&display=swap');
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    color: #ffffff;
+}
 .top-nav-collapse {
     background-color: #3f51b5 !important;
 }
@@ -94,4 +100,32 @@ a {
     margin-top: 30px;
     background-image: url("../image/dark.jpg");
     padding: 0;
+}
+figcaption {
+    font-family: 'Oswald', serif;
+}
+#menu {
+    padding-top: 20px;
+}
+.order-summary h1, .summary, .contact {
+    color: #000;
+    font-family: 'Love Ya Like A Sister', cursive;
+    margin-top: 30px;
+}
+#order-pizza {
+    padding: 20px 50px 20px 50px;
+    font-family: 'Love Ya Like A Sister', cursive;
+    color: #000;
+}
+
+.order-overlay {
+    height: inherit;
+    padding: 20px;
+    background-color: darkgoldenrod;
+    border-radius: 20px;
+}
+
+.checkout {
+    border-radius: 20px;
+    margin-top: 20px;
 }
