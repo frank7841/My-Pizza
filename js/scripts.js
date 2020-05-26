@@ -227,6 +227,18 @@ $(function(){
                 totalPrice = totalPrice + 190;
                 break;
         }
-
+        var newOrder = new Order(flavour, size, crust, topping, number, totalPrice);
+        $('.summary').slideDown(2000);
+        $('.custdata-overlay').slideUp();
+        $('#sum-list').slideDown();
+        $('.deliver').show(1000);
+        $('.delivernot').show(1000);
+        $('#list').text(" ");
+        $("#list").append("<br>" + "Flavour :   " + newOrder.this.myFlavour + "<br>" + "Size :   "
+            + newOrder.this.mySize + "<br>" + "Crust :     "
+            + newOrder.this.myCrust + "<br>" + "Toppings :     "
+            + newOrder.this.myTopping + "<br>" + " Number of pizzas :    "
+            + newOrder.this.myNumber + "<br>" + "Total Price :  "
+            + newOrder.this.myTotalPrice + "<br><br>").css('font-family', 'system-ui').css('font-size', '24px');
     });
 });
