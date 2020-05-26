@@ -2,11 +2,10 @@
 //function Address(name,location){
   //  this.myName = name;
     //this.myLocation = location;
-}
 //user interface
 //Address.prototype.fullAddress=function(){
   //  return "Order delivered to "+ this.myName + " in "+ this.myLocation;
-} 
+ 
 $(function () {
     $('.summary').hide();
     $('.custdata-overlay').hide();
